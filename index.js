@@ -176,7 +176,7 @@ function postcssBiDirection(opts) {
 
         // Rebuild tree for reuse
         root.walk(function (item) {
-            if (item.type === 'rule') {
+            if (item.type === 'rule' || tree.length === 0) {
                 tree[idx] = {
                     rule:     item,
                     nodes:    [],
